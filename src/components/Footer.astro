@@ -3,7 +3,20 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Amalara Game Studio
+	<form
+		class="subscribe"
+		action="https://buttondown.email/api/emails/embed-subscribe/carpedavid"
+		method="post"
+		target="popupwindow"
+		onsubmit="window.open('https://buttondown.email/carpedavid', 'popupwindow')"
+		>
+		<p>Subscribe for updates.</p>
+		<div class="subscribeRow">
+			<input type="email" placeholder="Email" name="email" id="bd-email" />
+			<input type="submit" value="Subscribe" class="subscribeButton"/>
+		</div>
+	</form>
+
 	<div class="social-links">
 		<a href="https://amalara.com" target="_blank">
 			<span class="sr-only">Amalara Game Studio Store</span>
@@ -28,24 +41,15 @@ const today = new Date();
 			<svg aria-hidden="true" height="32" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
 		</a>
 	</div>
-	<form
-		class="subscribe"
-		action="https://buttondown.email/api/emails/embed-subscribe/carpedavid"
-		method="post"
-		target="popupwindow"
-		onsubmit="window.open('https://buttondown.email/carpedavid', 'popupwindow')"
-		>
-		<p>Subscribe for updates.</p>
-		<div class="subscribeRow">
-			<input type="email" placeholder="Email" name="email" id="bd-email" />
-			<input type="submit" value="Subscribe" class="subscribeButton"/>
-		</div>
-	</form>
-
+	&copy; {today.getFullYear()} Amalara Game Studio
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
+		display: flex;
+		justify-content: center;
+		justify-self: stretch;
+		flex-direction: column;
+		gap: 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
